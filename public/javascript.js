@@ -1,27 +1,4 @@
-/*
-$(document).ready(function () {
-  
-});
-
-var objects = new tracking.ObjectTracker(['face', 'eye', 'mouth']);
-*/
-/*
-window.onload = function() {
-  run()
-};
-    
-function run() {
-
-  // try to access users webcam and stream the images
-  // to the video element
-  const videoEl = document.getElementById('myVideo')
-  navigator.getUserMedia(
-    { video: {} },
-    stream => videoEl.srcObject = stream,
-    err => console.error(err)
-  )
-}
-*/
+//Function for loading webcam and canvas (tracking.js library)
 window.onload = function () {
     var video = document.getElementById('myVideo');
     var canvas = document.getElementById('myCanvas');
