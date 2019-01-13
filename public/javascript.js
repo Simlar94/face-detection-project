@@ -20,7 +20,7 @@ window.onload = function () {
             context.fillStyle = "#fff";
             context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
             context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
-            
+
             //If audio is already playing > pauses audio.  
             var myAudio = document.getElementById('myAudio');
             if (myAudio.duration > 0 && !myAudio.paused) {
@@ -32,3 +32,8 @@ window.onload = function () {
         });
     });
 };
+
+function pauseVideo() {
+    var vid = document.getElementById('myVideo')
+    vid.pause();
+}

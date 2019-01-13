@@ -1,19 +1,23 @@
 {
-  "name": "me1593-facedetection",
+  "name": "face-detection-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "A face-detection project for school.\r Made with the tracking.js-package.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simlar94/face-detection-project.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Simlar94/face-detection-project/issues"
+  },
+  "homepage": "https://github.com/Simlar94/face-detection-project#readme",
   "dependencies": {
-    "express": "^4.16.4",
-    "nodemon": "^1.18.9",
-    "say": "^0.15.0",
-    "socket.io": "^2.2.0",
-    "socket.io-client": "^2.2.0"
+    "express": "^4.16.4"
   }
 }

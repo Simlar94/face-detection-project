@@ -5,13 +5,17 @@ body {
 
 #headCol {
     text-align: center;
-    margin-top: 5%;
-    padding-bottom: 5%;
 }
 
 #mainHeader {
     color: #FFFFFF;
     text-shadow: 2px 2px #000000;
+}
+
+#toggleBtnCol {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 video#bgvid {
