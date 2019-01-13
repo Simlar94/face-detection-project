@@ -3,7 +3,6 @@ body {
     background: #4F545B !important;
 }
 
-
 #headCol {
     text-align: center;
     margin-top: 5%;
@@ -42,7 +41,6 @@ video#bgvid {
     height: 100%;
     z-index: -1;
 }
-
 
 #myCanvas {
     position: absolute;

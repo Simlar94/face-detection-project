@@ -1,5 +1,5 @@
-//Function for loading webcam and canvas (tracking.js library)
 window.onload = function () {
+    //Declaring the tracking for a 'face' object for the myVideo element. 
     var video = document.getElementById('myVideo');
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
@@ -10,6 +10,7 @@ window.onload = function () {
     tracking.track('#myVideo', tracker, {
         camera: true
     });
+    //Tracking function for the canvas element.
     tracker.on('track', function (event) {
         context.clearRect(0, 0, canvas.width, canvas.height);
         event.data.forEach(function (rect) {
@@ -19,9 +20,15 @@ window.onload = function () {
             context.fillStyle = "#fff";
             context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
             context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
+            
+            //If audio is already playing > pauses audio.  
+            var myAudio = document.getElementById('myAudio');
+            if (myAudio.duration > 0 && !myAudio.paused) {
+                console.log('sound is already playing');
+            } else {
+                myAudio.play();
+            }
+
         });
     });
 };
-
-
-

@@ -6,8 +6,8 @@ const app = express();
 
 app.use('/static', express.static('public'));
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
-            
-app.listen(port, () => console.log("Server running on port: " + port));
+
+app.listen(port, () => console.log("Server is running on port: " + port));
