@@ -19,16 +19,13 @@
 <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -39,15 +36,12 @@
             <div class="col">
 
             </div>
-
             <div class="col-md-auto" id="headCol">
                 <h1 id="mainHeader">Face-detection</h1>
             </div>
-
             <div class="col">
 
             </div>
-
         </div>
 
 
@@ -55,31 +49,46 @@
             <div class="col">
 
             </div>
-
-            <div class="col-md-auto" id="toggleBtnCol">
-                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-                Single toggle
-            </button>
+            <div id="btnCol">
+                <div class="btn-group btn-group-toggle btn-block" data-toggle="buttons">
+                    <label class="btn btn-dark active" onclick="playVideo();">
+                        <input type="radio" name="options" id="playBtn" autocomplete="off" checked> Play
+                    </label>
+                    <label class="btn btn-dark" onclick="pauseVideo();">
+                        <input type="radio" name="options" id="pauseBtn" autocomplete="off"> Pause
+                    </label>
+                </div>
             </div>
-
             <div class="col">
 
             </div>
-
         </div>
+        <!--
+        <div class="row">
+            <div class="col">
 
+            </div>
+            <div class="col-md-auto" id="playBtnCol">
+                <button onclick="playVideo()" type="button" class="btn btn-dark">Play</button>
+            </div>
+            <div class="col-md-auto" id="pauseBtnCol">
+                <button onclick="pauseVideo()" type="button" class="btn btn-dark">Pause</button>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+        -->
     </div>
-
 
     <div class="container">
-
         <video class="video" id="myVideo" width="400" height="300" preload autoplay loop muted></video>
         <canvas class="canvas" id="myCanvas" width="400" height="300"></canvas>
-
-
     </div>
 
-    <audio id="myAudio"><source src="/static/sound2.mp3" type="audio/mpeg"></audio>
+    <audio id="myAudio">
+        <source src="/static/sound2.mp3" type="audio/mpeg">
+    </audio>
 
 
 

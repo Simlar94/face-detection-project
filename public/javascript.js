@@ -10,6 +10,7 @@ window.onload = function () {
     tracking.track('#myVideo', tracker, {
         camera: true
     });
+
     //Tracking function for the canvas element.
     tracker.on('track', function (event) {
         context.clearRect(0, 0, canvas.width, canvas.height);
@@ -35,5 +36,19 @@ window.onload = function () {
 
 function pauseVideo() {
     var vid = document.getElementById('myVideo')
+    var sound = document.getElementById('myAudio')
+    var cv = document.getElementById('myCanvas')
     vid.pause();
+    sound.muted = true;
+    cv.style.visibility = "hidden"
 }
+
+function playVideo() {
+    var vid = document.getElementById('myVideo')
+    var sound = document.getElementById('myAudio')
+    var cv = document.getElementById('myCanvas')
+    vid.play();
+    sound.muted = false;
+    cv.style.visibility = "visible"
+}
+
