@@ -38,7 +38,7 @@ function pauseVideo() {
     var vid = document.getElementById('myVideo')
     var sound = document.getElementById('myAudio')
     var cv = document.getElementById('myCanvas')
-    vid.pause();
+    //vid.pause();
     sound.muted = true;
     cv.style.visibility = "hidden"
 }
@@ -47,7 +47,7 @@ function playVideo() {
     var vid = document.getElementById('myVideo')
     var sound = document.getElementById('myAudio')
     var cv = document.getElementById('myCanvas')
-    vid.play();
+    //vid.play();
     sound.muted = false;
     cv.style.visibility = "visible"
 }
