@@ -1,5 +1,8 @@
 window.onload = function () {
-    //Declaring the tracking for a 'face' object for the myVideo element. 
+    //Declaring the tracking for a 'face' object for the myVideo element.
+    var sound = document.getElementById('myAudio')
+    sound.muted = true;
+    
     var video = document.getElementById('myVideo');
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
@@ -40,6 +43,7 @@ function pauseVideo() {
     var cv = document.getElementById('myCanvas')
     //vid.pause();
     sound.muted = true;
+    vid.style.visibility = "hidden"
     cv.style.visibility = "hidden"
 }
 
@@ -49,6 +53,7 @@ function playVideo() {
     var cv = document.getElementById('myCanvas')
     //vid.play();
     sound.muted = false;
+    vid.style.visibility= "visible"
     cv.style.visibility = "visible"
 }
 
